@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Douglas Santana | Manutenção Residencial em Guarulhos - Eletricista, Pintor e Montador</title>
+<meta name="description" content="Serviços domésticos especializados em Guarulhos/SP: eletricista, pintura, montagem de móveis e instalações. Orçamento sem compromisso pelo WhatsApp. Atendimento ágil e profissional com Douglas Santana." />
+<meta name="theme-color" content="#0b1b2e" />
+<meta name="author" content="Douglas Santana - Manutenção Residencial" />
+
+<!-- Open Graph / WhatsApp / Facebook preview -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Douglas Santana | Manutenção Residencial em Guarulhos" />
+<meta property="og:description" content="Eletricista, Pintor, Montador e Instalações. Orçamento sem compromisso pelo WhatsApp. Atendimento rápido e profissional em Guarulhos/SP." />
+<meta property="og:image" content="og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Manutenção Residencial - Douglas Santana" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Douglas Santana | Manutenção Residencial em Guarulhos" />
+<meta name="twitter:description" content="Eletricista, Pintor, Montador e Instalações. Orçamento sem compromisso pelo WhatsApp." />
+<meta name="twitter:image" content="og-image.png" />
+
+<!-- Favicon (raio laranja em SVG inline) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b1b2e'/%3E%3Cpath d='M56 12 28 56h18l-6 32 32-46H52z' fill='%23f47920'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --navy-900:#0a1626;
+    --navy-800:#0b1b2e;
+    --navy-700:#102640;
+    --navy-600:#15304f;
+    --navy-card:#11253f;
+    --orange:#f47920;
+    --orange-light:#ff8c39;
+    --orange-dark:#d8650f;
+    --white:#ffffff;
+    --text-soft:#c6d2e0;
+    --text-mute:#8ea2b8;
+    --whatsapp:#25d366;
+    --whatsapp-dark:#1da851;
+    --line:rgba(244,121,32,.28);
+    --shadow:0 18px 45px rgba(0,0,0,.45);
+    --radius:18px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    background:var(--navy-900);
+    color:var(--white);
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{font-family:'Oswald',sans-serif;letter-spacing:.5px;line-height:1.1}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+  section{position:relative}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,22,38,.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(244,121,32,.2);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1080px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Oswald';font-weight:700;font-size:18px;text-transform:uppercase}
+  .brand .logo{
+    width:38px;height:38px;border-radius:10px;background:var(--navy-700);
+    border:2px solid var(--orange);display:grid;place-items:center;flex-shrink:0;
+  }
+  .brand .logo svg{width:20px;height:20px;fill:var(--orange)}
+  .brand small{display:block;font-family:'Inter';font-weight:500;font-size:10px;color:var(--text-mute);letter-spacing:1px;text-transform:none}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:8px;background:var(--whatsapp);color:#fff;
+    font-weight:700;font-size:14px;padding:9px 16px;border-radius:30px;white-space:nowrap;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(37,211,102,.35)}
+  .nav-cta svg{width:18px;height:18px;fill:#fff}
+  .nav-cta span.txt{display:inline}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:54px 0 60px;text-align:center;
+    background:
+      radial-gradient(1200px 520px at 50% -10%, rgba(244,121,32,.14), transparent 60%),
+      linear-gradient(180deg, var(--navy-800), var(--navy-900));
+    border-bottom:1px solid rgba(244,121,32,.15);
+  }
+  .hero .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(244,121,32,.12);border:1px solid var(--line);
+    color:var(--orange-light);font-size:13px;font-weight:600;
+    padding:7px 16px;border-radius:30px;margin-bottom:22px;
+  }
+  .hero .badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--whatsapp);box-shadow:0 0 0 4px rgba(37,211,102,.2)}
+  .hero h1{
+    font-size:clamp(34px,8.5vw,62px);font-weight:700;text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  .hero h1 .accent{color:var(--orange);display:block}
+  .hero .sub{
+    font-family:'Oswald';font-weight:500;color:var(--text-soft);
+    font-size:clamp(15px,4vw,21px);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;
+  }
+  .hero .sub-line{display:inline-block;width:50px;height:3px;background:var(--orange);border-radius:2px;margin:0 12px;vertical-align:middle}
+  .hero p.lead{color:var(--text-soft);max-width:560px;margin:18px auto 0;font-size:16px}
+
+  .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:26px auto 0;max-width:620px}
+  .chip{
+    display:inline-flex;align-items:center;gap:8px;background:var(--navy-card);
+    border:1px solid rgba(255,255,255,.08);border-radius:30px;padding:9px 16px;font-size:14px;font-weight:600;
+  }
+  .chip svg{width:16px;height:16px;fill:var(--orange)}
+
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:32px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    font-weight:700;font-size:16px;padding:15px 26px;border-radius:14px;cursor:pointer;border:none;
+    transition:transform .15s ease, box-shadow .15s ease, background .2s ease;
+  }
+  .btn svg{width:20px;height:20px}
+  .btn-primary{background:linear-gradient(135deg,var(--orange),var(--orange-dark));color:#fff;box-shadow:0 12px 28px rgba(244,121,32,.35)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(244,121,32,.5)}
+  .btn-primary svg{fill:#fff}
+  .btn-whats{background:var(--whatsapp);color:#fff;box-shadow:0 12px 28px rgba(37,211,102,.3)}
+  .btn-whats:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(37,211,102,.45)}
+  .btn-whats svg{fill:#fff}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.25)}
+  .btn-ghost:hover{border-color:var(--orange);color:var(--orange-light)}
+
+  /* ---------- SECTION TITLES ---------- */
+  .sec{padding:62px 0}
+  .sec-head{text-align:center;margin-bottom:44px}
+  .sec-head .kicker{color:var(--orange);font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;display:block;margin-bottom:10px}
+  .sec-head h2{font-size:clamp(28px,6vw,42px);font-weight:700;text-transform:uppercase}
+  .sec-head p{color:var(--text-soft);max-width:560px;margin:14px auto 0}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--navy-800)}
+  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .svc{
+    background:var(--navy-card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);
+    padding:30px 20px;text-align:center;transition:transform .2s ease,border-color .2s ease;
+  }
+  .svc:hover{transform:translateY(-6px);border-color:var(--orange)}
+  .svc .ic{
+    width:78px;height:78px;border-radius:50%;border:3px solid var(--orange);
+    display:grid;place-items:center;margin:0 auto 18px;background:rgba(244,121,32,.07);
+  }
+  .svc .ic svg{width:38px;height:38px;fill:var(--orange)}
+  .svc h3{font-size:20px;font-weight:600;text-transform:uppercase;margin-bottom:8px}
+  .svc p{color:var(--text-mute);font-size:13.5px}
+
+  /* ---------- PRICE TABLE ---------- */
+  .prices{background:linear-gradient(180deg,var(--navy-900),var(--navy-800))}
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .price-card{
+    background:var(--navy-card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 24px 12px;box-shadow:var(--shadow);
+  }
+  .price-card .ph{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .price-card .ph .pic{width:46px;height:46px;border-radius:12px;background:rgba(244,121,32,.12);border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0}
+  .price-card .ph .pic svg{width:24px;height:24px;fill:var(--orange)}
+  .price-card .ph h3{font-size:19px;font-weight:600;text-transform:uppercase;color:var(--orange-light)}
+  .price-row{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
+  .price-row:last-child{border-bottom:none}
+  .price-row .name{color:var(--text-soft);font-size:14.5px}
+  .price-row .val{color:#fff;font-weight:700;font-family:'Oswald';font-size:16px;white-space:nowrap}
+  .price-note{text-align:center;color:var(--text-mute);font-size:13px;margin-top:26px}
+  .price-note strong{color:var(--orange-light)}
+
+  /* ---------- WHY / TRUST ---------- */
+  .why{background:var(--navy-800)}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .why-item{text-align:center;padding:24px 14px;background:var(--navy-card);border-radius:var(--radius);border:1px solid rgba(255,255,255,.06)}
+  .why-item .wic{width:54px;height:54px;border-radius:50%;background:rgba(244,121,32,.12);display:grid;place-items:center;margin:0 auto 14px}
+  .why-item .wic svg{width:26px;height:26px;fill:var(--orange)}
+  .why-item h4{font-size:16px;font-weight:700;font-family:'Inter';margin-bottom:6px}
+  .why-item p{color:var(--text-mute);font-size:13px}
+
+  /* ---------- GALLERY ---------- */
+  .gallery{background:linear-gradient(180deg,var(--navy-800),var(--navy-900))}
+  .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .gal-item{
+    position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;
+    border:1px solid rgba(255,255,255,.08);
+    display:grid;place-items:center;text-align:center;
+    background:linear-gradient(135deg,var(--navy-700),var(--navy-card));
+  }
+  /* Para colocar foto real: troque o conteudo do .gal-item por <img src="suafoto.jpg" alt="..."> */
+  .gal-item .gal-ph{padding:20px;color:var(--text-mute)}
+  .gal-item .gal-ph svg{width:42px;height:42px;fill:rgba(244,121,32,.6);margin-bottom:10px}
+  .gal-item .gal-ph .lbl{display:block;font-weight:600;color:var(--text-soft);font-size:14px;margin-bottom:4px}
+  .gal-item .gal-ph .tip{font-size:11px;color:var(--text-mute)}
+  .gal-item img{width:100%;height:100%;object-fit:cover}
+  .gal-cap{position:absolute;left:0;bottom:0;width:100%;padding:10px 14px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-weight:600;font-size:13px;text-align:left}
+
+  /* ---------- QUOTE FORM ---------- */
+  .quote{background:var(--navy-800)}
+  .form-shell{
+    max-width:680px;margin:0 auto;background:var(--navy-card);
+    border:1px solid var(--line);border-radius:22px;padding:34px;box-shadow:var(--shadow);
+  }
+  .form-shell .fh{text-align:center;margin-bottom:26px}
+  .form-shell .fh h3{font-size:24px;text-transform:uppercase;margin-bottom:8px}
+  .form-shell .fh p{color:var(--text-soft);font-size:14.5px}
+  .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+  .field.full{grid-column:1/-1}
+  .field label{font-size:13.5px;font-weight:600;color:var(--text-soft)}
+  .field label .req{color:var(--orange)}
+  .field input,.field select,.field textarea{
+    background:var(--navy-700);border:1.5px solid rgba(255,255,255,.1);border-radius:12px;
+    padding:13px 14px;color:#fff;font-size:15px;font-family:inherit;transition:border-color .15s ease;
+    width:100%;
+  }
+  .field input::placeholder,.field textarea::placeholder{color:#5f748c}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--orange)}
+  .field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f47920'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:22px;padding-right:40px}
+  .field textarea{resize:vertical;min-height:96px}
+  .field .hint{font-size:12px;color:var(--text-mute)}
+  .photo-tip{
+    display:flex;gap:12px;align-items:flex-start;background:rgba(37,211,102,.1);
+    border:1px solid rgba(37,211,102,.3);border-radius:12px;padding:13px 15px;margin-bottom:20px;
+  }
+  .photo-tip svg{width:22px;height:22px;fill:var(--whatsapp);flex-shrink:0;margin-top:2px}
+  .photo-tip p{font-size:13px;color:var(--text-soft)}
+  .form-submit{width:100%;font-size:17px;padding:17px}
+  .form-foot{text-align:center;color:var(--text-mute);font-size:12.5px;margin-top:14px}
+
+  /* ---------- FINAL CTA ---------- */
+  .final{
+    text-align:center;padding:64px 0;
+    background:radial-gradient(900px 400px at 50% 0%, rgba(244,121,32,.16), transparent 60%),var(--navy-900);
+  }
+  .final h2{font-size:clamp(26px,6vw,40px);text-transform:uppercase;margin-bottom:10px}
+  .final p{color:var(--text-soft);margin-bottom:26px;max-width:520px;margin-left:auto;margin-right:auto}
+  .phone-big{font-family:'Oswald';font-weight:700;font-size:clamp(28px,7vw,46px);color:#fff;letter-spacing:1px;margin-bottom:24px}
+  .phone-big .pi{display:inline-grid;place-items:center;width:54px;height:54px;border-radius:50%;background:var(--whatsapp);vertical-align:middle;margin-right:12px}
+  .phone-big .pi svg{width:30px;height:30px;fill:#fff}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--navy-900);border-top:1px solid rgba(244,121,32,.18);padding:36px 0 28px;text-align:center}
+  footer .brand{justify-content:center;margin-bottom:14px}
+  footer .finfo{color:var(--text-mute);font-size:14px;line-height:2}
+  footer .finfo a{color:var(--orange-light);font-weight:600}
+  footer .copy{color:#54677d;font-size:12px;margin-top:18px}
+
+  /* ---------- FLOATING WHATSAPP ---------- */
+  .float-whats{
+    position:fixed;right:18px;bottom:18px;z-index:60;
+    width:60px;height:60px;border-radius:50%;background:var(--whatsapp);
+    display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.5);
+    animation:pulse 2.4s infinite;
+  }
+  .float-whats svg{width:34px;height:34px;fill:#fff}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+  /* ---------- TOAST ---------- */
+  .toast{
+    position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(120px);
+    background:var(--navy-700);border:1px solid var(--orange);color:#fff;padding:14px 22px;border-radius:12px;
+    font-size:14px;font-weight:600;z-index:90;transition:transform .35s cubic-bezier(.2,.8,.2,1);box-shadow:var(--shadow);
+    max-width:90vw;text-align:center;
+  }
+  .toast.show{transform:translateX(-50%) translateY(0)}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:860px){
+    .svc-grid{grid-template-columns:repeat(2,1fr)}
+    .why-grid{grid-template-columns:repeat(2,1fr)}
+    .gal-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:680px){
+    .price-grid{grid-template-columns:1fr}
+    .fgrid{grid-template-columns:1fr}
+    .form-shell{padding:24px 18px}
+    .nav-cta span.txt{display:none}
+    .nav-cta{padding:10px}
+    .brand{font-size:15px}
+    .hero{padding:42px 0 48px}
+    .sec{padding:48px 0}
+    .hero-cta .btn{width:100%}
+  }
+  @media(max-width:420px){
+    .gal-grid{grid-template-columns:1fr 1fr}
+    .why-grid{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="nav">
+    <div class="brand">
+      <span class="logo">
+        <svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 9.5-12.5H13z"/></svg>
+      </span>
+      <span>Douglas Santana<small>Manutenção Residencial</small></span>
+    </div>
+    <a class="nav-cta" id="navWhats" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg>
+      <span class="txt">WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap">
+    <span class="badge">Atendimento em Guarulhos e região • Orçamento sem compromisso</span>
+    <h1>Manutenção <span class="accent">Residencial</span></h1>
+    <div class="sub"><span class="sub-line"></span>Serviços Domésticos Especializados<span class="sub-line"></span></div>
+    <p class="lead">Precisa de um serviço em casa? Eletricista, pintura, montagem de móveis e instalações com agilidade, preço justo e acabamento profissional.</p>
+
+    <div class="chips">
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 9.5-12.5H13z"/></svg>Eletricista</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M4 4h12v5H4zm0 7h12v2H6v9H4zm14-7h2v4h-2z"/></svg>Pintor</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="m22 19-7-7 2-2-3-3-2 2-6-6-3 3 6 6-2 2 3 3 2-2 7 7z"/></svg>Montador</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 4 1.5 4.5L18 12l-4.5 1.5L12 18l-1.5-4.5L6 12l4.5-1.5z"/></svg>Instalações</span>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#orcamento" class="btn btn-primary">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm-1 7V3.5L18.5 9zM7 13h10v2H7zm0 4h7v2H7z"/></svg>
+        Solicitar Orçamento
+      </a>
+      <a href="#" id="heroWhats" target="_blank" rel="noopener" class="btn btn-whats">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg>
+        Falar agora
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="sec services" id="servicos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">O que eu faço</span>
+      <h2>Nossos Serviços</h2>
+      <p>Solução completa de manutenção para sua casa ou apartamento, com profissionalismo e atendimento de confiança.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 9.5-12.5H13z"/></svg></span>
+        <h3>Eletricista</h3>
+        <p>Chuveiros, tomadas, interruptores, ventiladores de teto e suportes de TV.</p>
+      </div>
+      <div class="svc">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h12v5H4zm0 7h12v2H6v9H4zm14-7h2v4h-2z"/></svg></span>
+        <h3>Pintor</h3>
+        <p>Paredes, quartos, salas, portas e janelas com acabamento caprichado.</p>
+      </div>
+      <div class="svc">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="m22 19-7-7 2-2-3-3-2 2-6-6-3 3 6 6-2 2 3 3 2-2 7 7z"/></svg></span>
+        <h3>Montador</h3>
+        <p>Guarda-roupas, cômodas, mesas, criados-mudos, prateleiras e quadros.</p>
+      </div>
+      <div class="svc">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M19.4 13a7.5 7.5 0 0 0 .1-2l2-1.6-2-3.4-2.4 1a7.6 7.6 0 0 0-1.7-1l-.4-2.6h-4l-.4 2.6a7.6 7.6 0 0 0-1.7 1l-2.4-1-2 3.4 2 1.6a7.5 7.5 0 0 0 0 2l-2 1.6 2 3.4 2.4-1a7.6 7.6 0 0 0 1.7 1l.4 2.6h4l.4-2.6a7.6 7.6 0 0 0 1.7-1l2.4 1 2-3.4zM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5z"/></svg></span>
+        <h3>Instalações</h3>
+        <p>Instalação geral de equipamentos, acessórios e pequenos reparos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRICE TABLE ===================== -->
+<section class="sec prices" id="precos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Transparência total</span>
+      <h2>Tabela de Serviços</h2>
+      <p>Valores de referência para você se planejar. O orçamento final é confirmado após avaliação do serviço.</p>
+    </div>
+    <div class="price-grid">
+
+      <div class="price-card">
+        <div class="ph">
+          <span class="pic"><svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 9.5-12.5H13z"/></svg></span>
+          <h3>Serviços Elétricos</h3>
+        </div>
+        <div class="price-row"><span class="name">Troca de chuveiro elétrico</span><span class="val">R$ 70–80</span></div>
+        <div class="price-row"><span class="name">Instalação de tomada / interruptor</span><span class="val">R$ 70–80</span></div>
+        <div class="price-row"><span class="name">Instalação de ventilador de teto</span><span class="val">R$ 130–150</span></div>
+        <div class="price-row"><span class="name">Instalação de suporte de TV</span><span class="val">R$ 90–100</span></div>
+      </div>
+
+      <div class="price-card">
+        <div class="ph">
+          <span class="pic"><svg viewBox="0 0 24 24"><path d="M4 4h12v5H4zm0 7h12v2H6v9H4zm14-7h2v4h-2z"/></svg></span>
+          <h3>Pintura</h3>
+        </div>
+        <div class="price-row"><span class="name">Pintura de parede (até 10m²)</span><span class="val">R$ 200–250</span></div>
+        <div class="price-row"><span class="name">Pintura de portas e janelas</span><span class="val">R$ 100–150</span></div>
+        <div class="price-row"><span class="name">Pintura de quarto</span><span class="val">R$ 240</span></div>
+        <div class="price-row"><span class="name">Pintura de sala</span><span class="val">R$ 263</span></div>
+      </div>
+
+      <div class="price-card">
+        <div class="ph">
+          <span class="pic"><svg viewBox="0 0 24 24"><path d="m22 19-7-7 2-2-3-3-2 2-6-6-3 3 6 6-2 2 3 3 2-2 7 7z"/></svg></span>
+          <h3>Montagem e Instalação</h3>
+        </div>
+        <div class="price-row"><span class="name">Móvel pequeno (criado-mudo)</span><span class="val">R$ 60–90</span></div>
+        <div class="price-row"><span class="name">Móvel médio (cômoda / mesa)</span><span class="val">R$ 90–160</span></div>
+        <div class="price-row"><span class="name">Guarda-roupa 2–3 portas</span><span class="val">R$ 120–180</span></div>
+        <div class="price-row"><span class="name">Prateleiras e quadros</span><span class="val">R$ 50–120</span></div>
+      </div>
+
+      <div class="price-card">
+        <div class="ph">
+          <span class="pic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m1 5h-2v6l5 3 1-1.7-4-2.3z"/></svg></span>
+          <h3>Cobrança por Hora</h3>
+        </div>
+        <div class="price-row"><span class="name">Hora trabalhada</span><span class="val">R$ 150–250</span></div>
+        <div class="price-row"><span class="name">Diária (8 horas)</span><span class="val">R$ 300–800</span></div>
+        <div class="price-row"><span class="name">Visita técnica</span><span class="val">R$ 40–120</span></div>
+      </div>
+
+    </div>
+    <p class="price-note"><strong>* Materiais não inclusos.</strong> Valores podem variar conforme o local e a complexidade do serviço.</p>
+  </div>
+</section>
+
+<!-- ===================== WHY ===================== -->
+<section class="sec why">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Por que me contratar</span>
+      <h2>Trabalho de Confiança</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="wic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5zm-1.2 13.2L7 11.4l1.4-1.4 2.4 2.4 4.8-4.8L17 9z"/></svg></span>
+        <h4>Orçamento grátis</h4>
+        <p>Sem compromisso. Você só fecha se gostar.</p>
+      </div>
+      <div class="why-item">
+        <span class="wic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m1 5h-2v6l5 3 1-1.7-4-2.3z"/></svg></span>
+        <h4>Atendimento ágil</h4>
+        <p>Resposta rápida pelo WhatsApp e horário flexível.</p>
+      </div>
+      <div class="why-item">
+        <span class="wic"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5zm-2 14-4-4 1.4-1.4L10 12.2l6.6-6.6L18 7z"/></svg></span>
+        <h4>Acabamento caprichado</h4>
+        <p>Serviço bem feito, organizado e do jeito certo.</p>
+      </div>
+      <div class="why-item">
+        <span class="wic"><svg viewBox="0 0 24 24"><path d="M12 2 1 21h22zm0 4 7.5 13h-15zM11 10v4h2v-4zm0 6v2h2v-2z"/></svg></span>
+        <h4>Preço justo</h4>
+        <p>Valores honestos e combinados antes de começar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section class="sec gallery" id="galeria">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Resultados</span>
+      <h2>Galeria de Trabalhos</h2>
+      <p>Alguns exemplos dos serviços realizados. Quer ver mais? Chama no WhatsApp!</p>
+    </div>
+    <!--
+      COMO ADICIONAR SUAS FOTOS REAIS:
+      1. Coloque as fotos (ex.: foto1.jpg) na mesma pasta deste arquivo.
+      2. Em cada bloco abaixo, troque o <div class="gal-ph">...</div> por:
+         <img src="foto1.jpg" alt="Descrição do serviço">
+      3. Pronto! A foto aparece automaticamente recortada no tamanho certo.
+    -->
+    <div class="gal-grid">
+      <div class="gal-item">
+        <div class="gal-ph">
+          <svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 9.5-12.5H13z"/></svg>
+          <span class="lbl">Serviços Elétricos</span>
+          <span class="tip">Adicione sua foto aqui</span>
+        </div>
+        <span class="gal-cap">Instalação elétrica</span>
+      </div>
+      <div class="gal-item">
+        <div class="gal-ph">
+          <svg viewBox="0 0 24 24"><path d="M4 4h12v5H4zm0 7h12v2H6v9H4zm14-7h2v4h-2z"/></svg>
+          <span class="lbl">Pintura</span>
+          <span class="tip">Adicione sua foto aqui</span>
+        </div>
+        <span class="gal-cap">Parede pintada</span>
+      </div>
+      <div class="gal-item">
+        <div class="gal-ph">
+          <svg viewBox="0 0 24 24"><path d="m22 19-7-7 2-2-3-3-2 2-6-6-3 3 6 6-2 2 3 3 2-2 7 7z"/></svg>
+          <span class="lbl">Montagem de Móveis</span>
+          <span class="tip">Adicione sua foto aqui</span>
+        </div>
+        <span class="gal-cap">Guarda-roupa montado</span>
+      </div>
+      <div class="gal-item">
+        <div class="gal-ph">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m1.5 14h-3v-2h3zm0-4h-3V6h3z"/></svg>
+          <span class="lbl">Suporte de TV</span>
+          <span class="tip">Adicione sua foto aqui</span>
+        </div>
+        <span class="gal-cap">TV instalada</span>
+      </div>
+      <div class="gal-item">
+        <div class="gal-ph">
+          <svg viewBox="0 0 24 24"><path d="M2 11h20v2H2zm2-6 3 3-3 3zm14 0 3 3-3 3z"/></svg>
+          <span class="lbl">Prateleiras</span>
+          <span class="tip">Adicione sua foto aqui</span>
+        </div>
+        <span class="gal-cap">Prateleira instalada</span>
+      </div>
+      <div class="gal-item">
+        <div class="gal-ph">
+          <svg viewBox="0 0 24 24"><path d="M19.4 13a7.5 7.5 0 0 0 .1-2l2-1.6-2-3.4-2.4 1a7.6 7.6 0 0 0-1.7-1l-.4-2.6h-4l-.4 2.6a7.6 7.6 0 0 0-1.7 1l-2.4-1-2 3.4 2 1.6a7.5 7.5 0 0 0 0 2l-2 1.6 2 3.4 2.4-1a7.6 7.6 0 0 0 1.7 1l.4 2.6h4l.4-2.6a7.6 7.6 0 0 0 1.7-1l2.4 1 2-3.4zM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5z"/></svg>
+          <span class="lbl">Instalações Gerais</span>
+          <span class="tip">Adicione sua foto aqui</span>
+        </div>
+        <span class="gal-cap">Serviço concluído</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUOTE FORM ===================== -->
+<section class="sec quote" id="orcamento">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Peça seu orçamento</span>
+      <h2>Solicite um Orçamento</h2>
+      <p>Preencha os campos abaixo. Ao enviar, o pedido vai direto para o WhatsApp do Douglas já organizado — assim ele responde mais rápido e com mais precisão.</p>
+    </div>
+
+    <form class="form-shell" id="quoteForm" novalidate>
+      <div class="fh">
+        <h3>Seus Dados</h3>
+        <p>Quanto mais detalhes, melhor o atendimento. Leva menos de 1 minuto.</p>
+      </div>
+
+      <div class="fgrid">
+        <div class="field">
+          <label for="nome">Seu nome <span class="req">*</span></label>
+          <input type="text" id="nome" name="nome" placeholder="Ex.: João Silva" required />
+        </div>
+        <div class="field">
+          <label for="telefone">Seu WhatsApp / telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" inputmode="tel" />
+        </div>
+      </div>
+
+      <div class="fgrid">
+        <div class="field">
+          <label for="categoria">Tipo de serviço <span class="req">*</span></label>
+          <select id="categoria" name="categoria" required>
+            <option value="" disabled selected>Selecione...</option>
+            <option value="Serviços Elétricos">⚡ Serviços Elétricos</option>
+            <option value="Pintura">🎨 Pintura</option>
+            <option value="Montagem e Instalação">🔧 Montagem e Instalação</option>
+            <option value="Cobrança por Hora / Diária">🕐 Hora / Diária / Visita</option>
+            <option value="Outro">📌 Outro serviço</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="servico">Serviço específico</label>
+          <select id="servico" name="servico">
+            <option value="" disabled selected>Escolha o tipo primeiro</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field full">
+        <label for="descricao">Descreva o que você precisa <span class="req">*</span></label>
+        <textarea id="descricao" name="descricao" placeholder="Ex.: Preciso trocar o chuveiro do banheiro, ele parou de esquentar. O modelo é Lorenzetti 220V." required></textarea>
+        <span class="hint">Conte detalhes: o que está acontecendo, quantidade, modelo, tamanho do ambiente, etc.</span>
+      </div>
+
+      <div class="fgrid">
+        <div class="field">
+          <label for="bairro">Bairro / Endereço <span class="req">*</span></label>
+          <input type="text" id="bairro" name="bairro" placeholder="Ex.: Vila Galvão, Guarulhos" required />
+        </div>
+        <div class="field">
+          <label for="referencia">Ponto de referência</label>
+          <input type="text" id="referencia" name="referencia" placeholder="Ex.: Próximo ao mercado X" />
+        </div>
+      </div>
+
+      <div class="fgrid">
+        <div class="field">
+          <label for="urgencia">Urgência</label>
+          <select id="urgencia" name="urgencia">
+            <option value="" disabled selected>Selecione...</option>
+            <option value="Hoje / Urgente">🔴 Hoje / Urgente</option>
+            <option value="Esta semana">🟡 Esta semana</option>
+            <option value="Sem pressa / Quero agendar">🟢 Sem pressa / Agendar</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="horario">Melhor horário para visita</label>
+          <select id="horario" name="horario">
+            <option value="" disabled selected>Selecione...</option>
+            <option value="Manhã">Manhã</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noite">Noite</option>
+            <option value="Qualquer horário">Qualquer horário</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="photo-tip">
+        <svg viewBox="0 0 24 24"><path d="M9 3 7.2 5H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.2L15 3zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10m0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
+        <p><strong>Dica:</strong> tem fotos do local ou do problema? Depois de enviar, é só anexá-las direto na conversa do WhatsApp. Fotos ajudam o Douglas a dar um orçamento muito mais certeiro!</p>
+      </div>
+
+      <button type="submit" class="btn btn-whats form-submit">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg>
+        Enviar pedido pelo WhatsApp
+      </button>
+      <p class="form-foot">Ao enviar, o WhatsApp abre com sua mensagem pronta. É só apertar enviar. 🔒 Seus dados não são armazenados.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final">
+  <div class="wrap">
+    <h2>Bora resolver isso hoje?</h2>
+    <p>Chama no WhatsApp e tire suas dúvidas. Orçamento sem compromisso!</p>
+    <div class="phone-big">
+      <span class="pi"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607z"/></svg></span>
+      (11) 94897-0819
+    </div>
+    <div class="hero-cta" style="margin-top:0">
+      <a href="#" id="finalWhats" target="_blank" rel="noopener" class="btn btn-whats">Falar no WhatsApp agora</a>
+      <button class="btn btn-ghost" id="shareBtn">
+        <svg viewBox="0 0 24 24" style="fill:currentColor"><path d="M18 16a3 3 0 0 0-2.4 1.2l-7-3.5a3 3 0 0 0 0-1.4l7-3.5A3 3 0 1 0 15 6l-7 3.5a3 3 0 1 0 0 5l7 3.5A3 3 0 1 0 18 16"/></svg>
+        Compartilhar página
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="brand">
+      <span class="logo"><svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 9.5-12.5H13z"/></svg></span>
+      <span>Douglas Santana<small>Manutenção Residencial</small></span>
+    </div>
+    <div class="finfo">
+      Serviços Domésticos Especializados<br/>
+      📍 Guarulhos e região — São Paulo<br/>
+      📱 WhatsApp: <a href="#" id="footWhats" target="_blank" rel="noopener">(11) 94897-0819</a>
+    </div>
+    <p class="copy">© <span id="year"></span> Douglas Santana — Manutenção Residencial. Orçamento sem compromisso.</p>
+  </div>
+</footer>
+
+<!-- ===================== FLOATING WHATSAPP ===================== -->
+<a href="#" id="floatWhats" target="_blank" rel="noopener" class="float-whats" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg>
+</a>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  // ====== CONFIG ======
+  var WHATS_NUMBER = "5511948970819"; // (11) 94897-0819 em formato internacional
+  var WHATS_DEFAULT = "Olá Douglas! Vi seu site de Manutenção Residencial e gostaria de solicitar um orçamento.";
+
+  // ====== Serviços por categoria (alimenta o segundo select) ======
+  var SERVICOS = {
+    "Serviços Elétricos": [
+      "Troca de chuveiro elétrico",
+      "Instalação de tomada / interruptor",
+      "Instalação de ventilador de teto",
+      "Instalação de suporte de TV",
+      "Outro serviço elétrico"
+    ],
+    "Pintura": [
+      "Pintura de parede (até 10m²)",
+      "Pintura de portas e janelas",
+      "Pintura de quarto",
+      "Pintura de sala",
+      "Outro serviço de pintura"
+    ],
+    "Montagem e Instalação": [
+      "Móvel pequeno (criado-mudo)",
+      "Móvel médio (cômoda / mesa)",
+      "Guarda-roupa 2–3 portas",
+      "Prateleiras e quadros",
+      "Outra montagem"
+    ],
+    "Cobrança por Hora / Diária": [
+      "Hora trabalhada",
+      "Diária (8 horas)",
+      "Visita técnica"
+    ],
+    "Outro": [
+      "Vou descrever abaixo"
+    ]
+  };
+
+  var catSel = document.getElementById("categoria");
+  var svcSel = document.getElementById("servico");
+
+  catSel.addEventListener("change", function(){
+    var list = SERVICOS[this.value] || [];
+    svcSel.innerHTML = "";
+    var def = document.createElement("option");
+    def.value = ""; def.disabled = true; def.selected = true;
+    def.textContent = list.length ? "Selecione..." : "—";
+    svcSel.appendChild(def);
+    list.forEach(function(s){
+      var o = document.createElement("option");
+      o.value = s; o.textContent = s;
+      svcSel.appendChild(o);
+    });
+  });
+
+  // ====== Links diretos de WhatsApp (botões gerais) ======
+  function waLink(text){
+    return "https://wa.me/" + WHATS_NUMBER + "?text=" + encodeURIComponent(text);
+  }
+  ["navWhats","heroWhats","finalWhats","footWhats","floatWhats"].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el){ el.href = waLink(WHATS_DEFAULT); }
+  });
+
+  // ====== Envio do formulário -> mensagem organizada ======
+  var form = document.getElementById("quoteForm");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    var nome = document.getElementById("nome").value.trim();
+    var telefone = document.getElementById("telefone").value.trim();
+    var categoria = document.getElementById("categoria").value;
+    var servico = document.getElementById("servico").value;
+    var descricao = document.getElementById("descricao").value.trim();
+    var bairro = document.getElementById("bairro").value.trim();
+    var referencia = document.getElementById("referencia").value.trim();
+    var urgencia = document.getElementById("urgencia").value;
+    var horario = document.getElementById("horario").value;
+
+    // validação simples dos campos obrigatórios
+    if(!nome || !categoria || !descricao || !bairro){
+      showToast("Preencha os campos obrigatórios (*) para continuar.");
+      if(!nome) document.getElementById("nome").focus();
+      else if(!categoria) document.getElementById("categoria").focus();
+      else if(!descricao) document.getElementById("descricao").focus();
+      else document.getElementById("bairro").focus();
+      return;
+    }
+
+    // monta a mensagem organizada para o Douglas
+    var L = [];
+    L.push("🔧 *NOVO PEDIDO DE ORÇAMENTO*");
+    L.push("_via site Manutenção Residencial_");
+    L.push("");
+    L.push("👤 *Nome:* " + nome);
+    if(telefone) L.push("📱 *Contato:* " + telefone);
+    L.push("");
+    L.push("🛠️ *Serviço:* " + categoria);
+    if(servico) L.push("📋 *Detalhe:* " + servico);
+    L.push("");
+    L.push("📝 *O que precisa:*");
+    L.push(descricao);
+    L.push("");
+    L.push("📍 *Bairro/Endereço:* " + bairro);
+    if(referencia) L.push("🏠 *Referência:* " + referencia);
+    if(urgencia) L.push("⏱️ *Urgência:* " + urgencia);
+    if(horario) L.push("🕐 *Melhor horário:* " + horario);
+    L.push("");
+    L.push("_Aguardo seu retorno. Obrigado(a)!_");
+
+    var msg = L.join("\n");
+    showToast("Abrindo o WhatsApp com seu pedido pronto...");
+    window.open(waLink(msg), "_blank");
+  });
+
+  // ====== Compartilhar página ======
+  var shareBtn = document.getElementById("shareBtn");
+  if(shareBtn){
+    shareBtn.addEventListener("click", async function(){
+      var shareData = {
+        title: "Douglas Santana - Manutenção Residencial",
+        text: "Eletricista, Pintor, Montador e Instalações em Guarulhos. Orçamento sem compromisso!",
+        url: window.location.href
+      };
+      if(navigator.share){
+        try{ await navigator.share(shareData); }catch(err){}
+      } else {
+        try{
+          await navigator.clipboard.writeText(window.location.href);
+          showToast("Link copiado! Agora é só colar no WhatsApp. 📋");
+        }catch(err){
+          showToast("Link: " + window.location.href);
+        }
+      }
+    });
+  }
+
+  // ====== Toast ======
+  var toastTimer;
+  function showToast(text){
+    var t = document.getElementById("toast");
+    t.textContent = text;
+    t.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ t.classList.remove("show"); }, 3800);
+  }
+
+  // ano no rodapé
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
