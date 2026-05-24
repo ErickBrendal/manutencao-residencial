@@ -182,6 +182,13 @@
   .price-row .val{color:#fff;font-weight:700;font-family:'Oswald';font-size:16px;white-space:nowrap}
   .price-note{text-align:center;color:var(--text-mute);font-size:13px;margin-top:26px}
   .price-note strong{color:var(--orange-light)}
+  .price-callout{
+    display:flex;gap:14px;align-items:flex-start;max-width:760px;margin:0 auto 34px;
+    background:rgba(244,121,32,.09);border:1px solid var(--line);border-radius:14px;padding:16px 20px;
+  }
+  .price-callout svg{width:24px;height:24px;fill:var(--orange);flex-shrink:0;margin-top:2px}
+  .price-callout p{color:var(--text-soft);font-size:14px;margin:0}
+  .price-callout strong{color:var(--orange-light)}
 
   /* ---------- WHY / TRUST ---------- */
   .why{background:var(--navy-800)}
@@ -328,13 +335,6 @@
     <div class="sub"><span class="sub-line"></span>Serviços Domésticos Especializados<span class="sub-line"></span></div>
     <p class="lead">Precisa de um serviço em casa? Eletricista, pintura, montagem de móveis e instalações com agilidade, preço justo e acabamento profissional.</p>
 
-    <div class="chips">
-      <span class="chip"><svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 9.5-12.5H13z"/></svg>Eletricista</span>
-      <span class="chip"><svg viewBox="0 0 24 24"><path d="M4 4h12v5H4zm0 7h12v2H6v9H4zm14-7h2v4h-2z"/></svg>Pintor</span>
-      <span class="chip"><svg viewBox="0 0 24 24"><path d="m22 19-7-7 2-2-3-3-2 2-6-6-3 3 6 6-2 2 3 3 2-2 7 7z"/></svg>Montador</span>
-      <span class="chip"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 4 1.5 4.5L18 12l-4.5 1.5L12 18l-1.5-4.5L6 12l4.5-1.5z"/></svg>Instalações</span>
-    </div>
-
     <div class="hero-cta">
       <a href="#orcamento" class="btn btn-primary">
         <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm-1 7V3.5L18.5 9zM7 13h10v2H7zm0 4h7v2H7z"/></svg>
@@ -385,10 +385,16 @@
 <section class="sec prices" id="precos">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">Transparência total</span>
-      <h2>Tabela de Serviços</h2>
-      <p>Valores de referência para você se planejar. O orçamento final é confirmado após avaliação do serviço.</p>
+      <span class="kicker">Preços transparentes</span>
+      <h2>Nossa Tabela de Preços</h2>
+      <p>Para você já ter uma ideia de quanto custa, sem surpresas.</p>
     </div>
+
+    <div class="price-callout">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m1 15h-2v-6h2zm0-8h-2V7h2z"/></svg>
+      <p><strong>Observação importante:</strong> os valores abaixo são uma <strong>base de referência</strong>, calculados sobre o tamanho e o padrão médio de cada serviço — servem apenas para você ter uma ideia inicial. O preço final pode mudar de acordo com o <strong>grau de dificuldade</strong>, a altura, o acabamento desejado, a quantidade e as condições do ambiente. Por isso, o melhor é solicitar um orçamento: é rápido, gratuito e sem compromisso.</p>
+    </div>
+
     <div class="price-grid">
 
       <div class="price-card">
@@ -435,7 +441,7 @@
       </div>
 
     </div>
-    <p class="price-note"><strong>* Materiais não inclusos.</strong> Valores podem variar conforme o local e a complexidade do serviço.</p>
+    <p class="price-note"><strong>* Materiais não inclusos.</strong> Tabela-base referente ao tamanho/padrão médio de cada serviço — o valor final pode variar conforme o grau de dificuldade e as condições do local.</p>
   </div>
 </section>
 
