@@ -208,20 +208,48 @@
 
   /* ---------- GALLERY ---------- */
   .gallery{background:linear-gradient(180deg,var(--navy-800),var(--navy-900))}
+
+  /* vídeo em destaque */
+  .gal-video{max-width:720px;margin:0 auto 30px}
+  .gal-video .vwrap{position:relative;width:100%;aspect-ratio:16/11;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);cursor:pointer;background:#000}
+  .gal-video video,.gal-video .vposter{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .gal-video .vplay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:rgba(244,121,32,.92);display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.5);transition:transform .15s ease}
+  .gal-video .vwrap:hover .vplay{transform:translate(-50%,-50%) scale(1.08)}
+  .gal-video .vplay svg{width:30px;height:30px;fill:#fff;margin-left:5px}
+  .gal-video .vtag{position:absolute;top:12px;left:12px;display:inline-flex;align-items:center;gap:7px;background:rgba(11,27,46,.82);border:1px solid var(--line);color:#fff;font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:30px}
+  .gal-video .vtag svg{width:15px;height:15px;fill:var(--orange)}
+
+  /* filtros */
+  .gal-filters{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-bottom:26px}
+  .gal-filter{background:var(--navy-card);border:1px solid rgba(255,255,255,.12);color:var(--text-soft);font-family:inherit;font-weight:600;font-size:13.5px;padding:9px 17px;border-radius:30px;cursor:pointer;transition:border-color .15s,background .2s,color .2s}
+  .gal-filter:hover{border-color:var(--orange);color:#fff}
+  .gal-filter.active{background:linear-gradient(135deg,var(--orange),var(--orange-dark));color:#fff;border-color:transparent}
+
+  /* grid */
   .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .gal-item{
-    position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;
-    border:1px solid rgba(255,255,255,.08);
-    display:grid;place-items:center;text-align:center;
-    background:linear-gradient(135deg,var(--navy-700),var(--navy-card));
-  }
-  /* Para colocar foto real: troque o conteudo do .gal-item por <img src="suafoto.jpg" alt="..."> */
-  .gal-item .gal-ph{padding:20px;color:var(--text-mute)}
-  .gal-item .gal-ph svg{width:42px;height:42px;fill:rgba(244,121,32,.6);margin-bottom:10px}
-  .gal-item .gal-ph .lbl{display:block;font-weight:600;color:var(--text-soft);font-size:14px;margin-bottom:4px}
-  .gal-item .gal-ph .tip{font-size:11px;color:var(--text-mute)}
-  .gal-item img{width:100%;height:100%;object-fit:cover}
-  .gal-cap{position:absolute;left:0;bottom:0;width:100%;padding:10px 14px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-weight:600;font-size:13px;text-align:left}
+  .gal-item{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.08);cursor:pointer;background:var(--navy-card);margin:0}
+  .gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease;display:block}
+  .gal-item:hover img{transform:scale(1.07)}
+  .gal-cap{position:absolute;left:0;bottom:0;width:100%;margin:0;padding:18px 14px 11px;background:linear-gradient(transparent,rgba(0,0,0,.82));font-weight:600;font-size:13.5px;text-align:left}
+  .gal-badge{position:absolute;top:10px;left:10px;background:rgba(244,121,32,.92);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;padding:4px 9px;border-radius:20px}
+  .gal-zoom{position:absolute;top:9px;right:9px;width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.5);display:grid;place-items:center;opacity:0;transition:opacity .2s ease}
+  .gal-item:hover .gal-zoom{opacity:1}
+  .gal-zoom svg{width:15px;height:15px;fill:#fff}
+  .gal-item.hide{display:none}
+
+  /* lightbox */
+  .lightbox{position:fixed;inset:0;z-index:100;background:rgba(5,10,18,.95);display:none;align-items:center;justify-content:center}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:92vw;max-height:80vh;border-radius:10px;box-shadow:0 24px 70px rgba(0,0,0,.7)}
+  .lb-cap{position:absolute;bottom:22px;left:0;width:100%;text-align:center;color:#fff;font-weight:600;font-size:15px;padding:0 20px}
+  .lb-btn{position:absolute;background:rgba(255,255,255,.12);border:none;color:#fff;cursor:pointer;display:grid;place-items:center;border-radius:50%;transition:background .15s ease}
+  .lb-btn:hover{background:rgba(244,121,32,.9)}
+  .lb-btn svg{fill:#fff}
+  .lb-close{top:18px;right:20px;width:46px;height:46px}
+  .lb-close svg{width:22px;height:22px}
+  .lb-prev,.lb-next{top:50%;transform:translateY(-50%);width:50px;height:50px}
+  .lb-prev{left:14px}.lb-next{right:14px}
+  .lb-prev svg,.lb-next svg{width:26px;height:26px}
 
   /* ---------- QUOTE FORM ---------- */
   .quote{background:var(--navy-800)}
@@ -508,69 +536,120 @@
 <section class="sec gallery" id="galeria">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">Resultados</span>
+      <span class="kicker">Resultados reais</span>
       <h2>Galeria de Trabalhos</h2>
-      <p>Alguns exemplos dos serviços realizados. Quer ver mais? Chama no WhatsApp!</p>
+      <p>Móveis montados e instalações feitas pelo Douglas. Toque nas fotos para ampliar.</p>
     </div>
-    <!--
-      COMO ADICIONAR SUAS FOTOS REAIS:
-      1. Coloque as fotos (ex.: foto1.jpg) na mesma pasta deste arquivo.
-      2. Em cada bloco abaixo, troque o <div class="gal-ph">...</div> por:
-         <img src="foto1.jpg" alt="Descrição do serviço">
-      3. Pronto! A foto aparece automaticamente recortada no tamanho certo.
-    -->
-    <div class="gal-grid">
-      <div class="gal-item">
-        <div class="gal-ph">
-          <svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 9.5-12.5H13z"/></svg>
-          <span class="lbl">Serviços Elétricos</span>
-          <span class="tip">Adicione sua foto aqui</span>
-        </div>
-        <span class="gal-cap">Instalação elétrica</span>
-      </div>
-      <div class="gal-item">
-        <div class="gal-ph">
-          <svg viewBox="0 0 24 24"><path d="M4 4h12v5H4zm0 7h12v2H6v9H4zm14-7h2v4h-2z"/></svg>
-          <span class="lbl">Pintura</span>
-          <span class="tip">Adicione sua foto aqui</span>
-        </div>
-        <span class="gal-cap">Parede pintada</span>
-      </div>
-      <div class="gal-item">
-        <div class="gal-ph">
-          <svg viewBox="0 0 24 24"><path d="m22 19-7-7 2-2-3-3-2 2-6-6-3 3 6 6-2 2 3 3 2-2 7 7z"/></svg>
-          <span class="lbl">Montagem de Móveis</span>
-          <span class="tip">Adicione sua foto aqui</span>
-        </div>
-        <span class="gal-cap">Guarda-roupa montado</span>
-      </div>
-      <div class="gal-item">
-        <div class="gal-ph">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m1.5 14h-3v-2h3zm0-4h-3V6h3z"/></svg>
-          <span class="lbl">Suporte de TV</span>
-          <span class="tip">Adicione sua foto aqui</span>
-        </div>
-        <span class="gal-cap">TV instalada</span>
-      </div>
-      <div class="gal-item">
-        <div class="gal-ph">
-          <svg viewBox="0 0 24 24"><path d="M2 11h20v2H2zm2-6 3 3-3 3zm14 0 3 3-3 3z"/></svg>
-          <span class="lbl">Prateleiras</span>
-          <span class="tip">Adicione sua foto aqui</span>
-        </div>
-        <span class="gal-cap">Prateleira instalada</span>
-      </div>
-      <div class="gal-item">
-        <div class="gal-ph">
-          <svg viewBox="0 0 24 24"><path d="M19.4 13a7.5 7.5 0 0 0 .1-2l2-1.6-2-3.4-2.4 1a7.6 7.6 0 0 0-1.7-1l-.4-2.6h-4l-.4 2.6a7.6 7.6 0 0 0-1.7 1l-2.4-1-2 3.4 2 1.6a7.5 7.5 0 0 0 0 2l-2 1.6 2 3.4 2.4-1a7.6 7.6 0 0 0 1.7 1l.4 2.6h4l.4-2.6a7.6 7.6 0 0 0 1.7-1l2.4 1 2-3.4zM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5z"/></svg>
-          <span class="lbl">Instalações Gerais</span>
-          <span class="tip">Adicione sua foto aqui</span>
-        </div>
-        <span class="gal-cap">Serviço concluído</span>
+
+    <!-- Vídeo em destaque -->
+    <div class="gal-video">
+      <div class="vwrap" id="galVideoWrap">
+        <img class="vposter" id="galVideoPoster" src="video-poster.jpg" alt="Montagem de armários de cozinha planejada" loading="lazy" />
+        <video id="galVideo" preload="none" playsinline controls loop poster="video-poster.jpg" style="display:none">
+          <source src="video-montagem-cozinha.mp4" type="video/mp4" />
+        </video>
+        <span class="vtag"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Vídeo • Montagem de cozinha</span>
+        <span class="vplay" id="galVideoPlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
       </div>
     </div>
+
+    <!-- Filtros por categoria -->
+    <div class="gal-filters" id="galFilters">
+      <button type="button" class="gal-filter active" data-cat="all">Todos</button>
+      <button type="button" class="gal-filter" data-cat="camas">Camas e Beliches</button>
+      <button type="button" class="gal-filter" data-cat="guarda">Guarda-roupas e Closets</button>
+      <button type="button" class="gal-filter" data-cat="armarios">Escrivaninha e Armários</button>
+      <button type="button" class="gal-filter" data-cat="instalacoes">Instalações</button>
+    </div>
+
+    <!-- Grid de fotos -->
+    <div class="gal-grid" id="galGrid">
+      <figure class="gal-item" data-cat="camas">
+        <img src="cama-beliche.jpg" alt="Beliche de madeira montado em quarto" loading="lazy" />
+        <span class="gal-badge">Cama</span>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14M7 9h5v1H7z"/></svg></span>
+        <figcaption class="gal-cap">Beliche em madeira</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="guarda">
+        <img src="guarda-roupa-rosa.jpg" alt="Guarda-roupa branco e rosa com espelho montado" loading="lazy" />
+        <span class="gal-badge">Guarda-roupa</span>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14M7 9h5v1H7z"/></svg></span>
+        <figcaption class="gal-cap">Guarda-roupa com espelho</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="armarios">
+        <img src="escrivaninha.jpg" alt="Escrivaninha branca com pés de ferro estilo industrial" loading="lazy" />
+        <span class="gal-badge">Escrivaninha</span>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14M7 9h5v1H7z"/></svg></span>
+        <figcaption class="gal-cap">Escrivaninha industrial</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="camas">
+        <img src="cama-casal.jpg" alt="Cama de casal branca com estrado montada" loading="lazy" />
+        <span class="gal-badge">Cama</span>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14M7 9h5v1H7z"/></svg></span>
+        <figcaption class="gal-cap">Cama de casal com estrado</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="guarda">
+        <img src="guarda-roupa-preto.jpg" alt="Guarda-roupa preto de 3 portas de correr montado" loading="lazy" />
+        <span class="gal-badge">Guarda-roupa</span>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14M7 9h5v1H7z"/></svg></span>
+        <figcaption class="gal-cap">Guarda-roupa 3 portas de correr</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="armarios">
+        <img src="armario-fechado.jpg" alt="Armário multiuso branco de 2 portas montado" loading="lazy" />
+        <span class="gal-badge">Armário</span>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14M7 9h5v1H7z"/></svg></span>
+        <figcaption class="gal-cap">Armário multiuso 2 portas</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="camas">
+        <img src="cama-solteiro.jpg" alt="Cama de solteiro com estrado montada" loading="lazy" />
+        <span class="gal-badge">Cama</span>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14M7 9h5v1H7z"/></svg></span>
+        <figcaption class="gal-cap">Cama com estrado</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="guarda">
+        <img src="guarda-roupa-rosa-aberto.jpg" alt="Guarda-roupa aberto mostrando prateleiras e cabideiro" loading="lazy" />
+        <span class="gal-badge">Guarda-roupa</span>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14M7 9h5v1H7z"/></svg></span>
+        <figcaption class="gal-cap">Guarda-roupa por dentro</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="armarios">
+        <img src="armario-aberto.jpg" alt="Armário multiuso branco aberto com prateleiras" loading="lazy" />
+        <span class="gal-badge">Armário</span>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14M7 9h5v1H7z"/></svg></span>
+        <figcaption class="gal-cap">Armário multiuso (por dentro)</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="guarda">
+        <img src="closet-modulado.jpg" alt="Closet modulado de madeira com prateleiras e gavetas" loading="lazy" />
+        <span class="gal-badge">Closet</span>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14M7 9h5v1H7z"/></svg></span>
+        <figcaption class="gal-cap">Closet modulado</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="guarda">
+        <img src="guarda-roupa-preto-2.jpg" alt="Roupeiro preto de portas de correr montado" loading="lazy" />
+        <span class="gal-badge">Guarda-roupa</span>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14M7 9h5v1H7z"/></svg></span>
+        <figcaption class="gal-cap">Roupeiro de correr</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="instalacoes">
+        <img src="painel-parede.jpg" alt="Painel decorativo instalado em parede de academia" loading="lazy" />
+        <span class="gal-badge">Instalação</span>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14M7 9h5v1H7z"/></svg></span>
+        <figcaption class="gal-cap">Painel decorativo de parede</figcaption>
+      </figure>
+    </div>
+
+    <p class="price-note" style="margin-top:28px">Esses são alguns dos trabalhos realizados. Quer ver mais ou pedir um serviço parecido? <strong>Chama no WhatsApp!</strong></p>
   </div>
 </section>
+
+<!-- Lightbox (ampliação das fotos) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Visualização da foto">
+  <button type="button" class="lb-btn lb-close" id="lbClose" aria-label="Fechar"><svg viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+  <button type="button" class="lb-btn lb-prev" id="lbPrev" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button>
+  <img id="lbImg" src="" alt="" />
+  <button type="button" class="lb-btn lb-next" id="lbNext" aria-label="Próxima foto"><svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
 
 <!-- ===================== QUOTE FORM ===================== -->
 <section class="sec quote" id="orcamento">
@@ -862,6 +941,98 @@
 
   // ano no rodapé
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // ====== Vídeo em destaque (play sob demanda) ======
+  (function(){
+    var wrap = document.getElementById("galVideoWrap");
+    if(!wrap) return;
+    var vid = document.getElementById("galVideo");
+    var poster = document.getElementById("galVideoPoster");
+    var play = document.getElementById("galVideoPlay");
+    wrap.addEventListener("click", function(){
+      if(vid.style.display === "none"){
+        vid.style.display = "block";
+        poster.style.display = "none";
+        play.style.display = "none";
+        vid.play();
+      }
+    });
+  })();
+
+  // ====== Filtros da galeria ======
+  (function(){
+    var filters = document.getElementById("galFilters");
+    if(!filters) return;
+    var items = Array.prototype.slice.call(document.querySelectorAll("#galGrid .gal-item"));
+    filters.addEventListener("click", function(e){
+      var btn = e.target.closest(".gal-filter");
+      if(!btn) return;
+      filters.querySelectorAll(".gal-filter").forEach(function(b){ b.classList.remove("active"); });
+      btn.classList.add("active");
+      var cat = btn.getAttribute("data-cat");
+      items.forEach(function(it){
+        var show = (cat === "all") || (it.getAttribute("data-cat") === cat);
+        it.classList.toggle("hide", !show);
+      });
+    });
+  })();
+
+  // ====== Lightbox (ampliar fotos) ======
+  (function(){
+    var lb = document.getElementById("lightbox");
+    if(!lb) return;
+    var lbImg = document.getElementById("lbImg");
+    var lbCap = document.getElementById("lbCap");
+    var grid = document.getElementById("galGrid");
+    var current = -1;
+
+    function visibleItems(){
+      return Array.prototype.slice.call(grid.querySelectorAll(".gal-item")).filter(function(it){
+        return !it.classList.contains("hide");
+      });
+    }
+    function openAt(item){
+      var list = visibleItems();
+      current = list.indexOf(item);
+      render(list);
+      lb.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+    function render(list){
+      var it = list[current];
+      if(!it) return;
+      var img = it.querySelector("img");
+      var cap = it.querySelector(".gal-cap");
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lbCap.textContent = cap ? cap.textContent : "";
+    }
+    function step(dir){
+      var list = visibleItems();
+      current = (current + dir + list.length) % list.length;
+      render(list);
+    }
+    function close(){
+      lb.classList.remove("open");
+      document.body.style.overflow = "";
+      lbImg.src = "";
+    }
+
+    grid.addEventListener("click", function(e){
+      var item = e.target.closest(".gal-item");
+      if(item) openAt(item);
+    });
+    document.getElementById("lbClose").addEventListener("click", close);
+    document.getElementById("lbPrev").addEventListener("click", function(){ step(-1); });
+    document.getElementById("lbNext").addEventListener("click", function(){ step(1); });
+    lb.addEventListener("click", function(e){ if(e.target === lb) close(); });
+    document.addEventListener("keydown", function(e){
+      if(!lb.classList.contains("open")) return;
+      if(e.key === "Escape") close();
+      else if(e.key === "ArrowLeft") step(-1);
+      else if(e.key === "ArrowRight") step(1);
+    });
+  })();
 </script>
 </body>
 </html>
